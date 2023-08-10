@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;0,800;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    min-height: 1000px;
+    background:  #07447e;
+    transition: 0.5s;
+    margin: 0;
+    padding: 0;
+    /*background: #0062be;*/
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 100px;
+    height: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: flex-end;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    transition: 1s;
+    z-index: 2000;
+}
+header.sticky{
+    height:80px;
+}
+header .banner{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+}
+header.sticky .banner{
+    opacity: 0.5;
+}
+header .logo{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 10em;
+    transition: 1s;
+    text-decoration: none;
+    z-index: 1;
+    font-family: 'Caprisimo';
+    font-style: italic;
+}
+.xd{
+    width: 90px;
+}
+header.sticky .logo{
+    position: absolute;
+    font-size: 2em;
+    left: 150px;
+    transform: translate(-50%, -50%);
+}
+nav{
+    position:relative;
+    display: flex;
+    z-index: 1;
+}
+nav ul{
+    position: relative;
+    display: flex;
+    transition: 0.25s;
+    color:#fff;
+    transform: translateX(100px);
+    opacity: 0;
+}
+header.sticky nav ul{
+    transform: translateX(0); 
+    opacity: 1;
+    transition-delay: 0.75s;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    color: #fff;
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 1.4em;
+    font-weight: 600;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    color: #ff275f
+}
+header .logo:hover{
+    color: #0062be;
+}
+.text2{
+    color: #fff;
+}
+.text1{
+    color: #fff;
+}
+.sec1{
+    position: relative;
+    margin-top: 200px;
+    padding: 100px;
+    color:#fff;
+   
+}
+.contentBox{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.textBox{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    pointer-events: none;
+}
+.textBox h1{
+    font-size: 4em;
+    font-family: 'Caprasimo';
+    font-style: italic;
+}
+.textBox h2{
+    font-size: 6em;
+}
+.textBox p{
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+.productBox{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    left: 45%;
+}
+.productBox img{
+    width: 80px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: 0.5s;
+}
+.productBox img:hover{
+    transform: translateY(-30px);
+}
+.fixedImage{
+    margin-top: 200px;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-image: url(background/this.jpg);
+    background-attachment: fixed;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+.fixedImage h1{
+    font-weight: 800;
+    /* line-height: 60px; */
+    font-size:8em;
+    font-family: 'Caprasimo';
+   
+}
+/* .sec3{
+    display: flex;
+    flex-wrap: wrap;
+} */
+.sec3{
+    margin-top: 200px;
+    color:#fff;
+    transition: 0.5s;
+    z-index: 100;
+}
+.sec3 h1{
+    pointer-events: none;
+}
+.firstDivContent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    transition: 0.5s;
+    
+}
+.firstText p{
+    display: inline;
+    color:rgb(250, 191, 81)
+}
+.p1{
+    display: inline;
+    color:rgb(234, 223, 22);
+    font-family: 'Caprasimo';
+}
+.p2{
+    display: inline;
+    color:rgb(234, 22, 93);
+    font-family: 'Caprasimo';
+}
+.secondDiv p{
+    color: #ff07da;
+    font-weight: 800;
+    display: inline;
+}
+.firstImage img{
+    transition: 0.5s;
+}
+.firstImage img:hover{
+    transform: scale(1.1);
+}
+.secondDivContent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.secondImage img{
+    transition: 0.5s;
+}
+.secondImage img:hover{
+    transform: scale(1.1);
+}
+/*Making responsive*/
+@media (max-width: 991px){
+    
+    header{
+        padding: 40px;
+    }
+   
+    section h2{
+        font-size: 2em;
+    }
+    header.sticky .logo{
+        left: 120px;
+    }
+    header .logo{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 6em;
+        left: 50%;
+    }
+    /* header.sticky .banner{
+        /* opacity: 0;  vise mi se svidja kad se vidi
+        
+    } */
+    nav ul{
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+    nav.active ul{
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 80px);
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    header.sticky nav ul{
+        opacity: 1;
+        visibility: visible;
+
+    }
+    nav ul li a{
+        font-size: 2em;
+        padding: 5px 15px ;
+    }
+    header.sticky .toggle{
+        position: fixed;
+        top:15px;
+        right: 40px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        border-radius: 5px;
+        background: #fff url(menubar/menu.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    header.sticky .toggle.active{
+        background: #fff url(menubar/close.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .sec1{
+        padding: 0px;
+    }
+
+    .sec2{
+        margin-top: 400px;
+        padding: 0;
+        font-size: 0.4em;
+    }
+    .firstDivContent{
+        margin-bottom: 200px;
+    }
+    .firstImage img{
+        width: 200px;
+        margin-bottom: 20px;
+    }
+    .secondImage img{
+        width: 200px;
+        margin-top: 40px;
+    }
+}
+@media (max-width: 426px){
+    header{
+        height: 105vh;
+    }
+    
+    .imgBox{
+        position: relative;
+        margin-top: 40px;
+
+    }
+    .imgBox img{
+        width: 150px;
+        margin-left: 130px;
+    }
+    .sec1{
+        padding:0px;
+    }
+    .sec2{
+        margin-top: 400px;
+        /* margin-left: 20px; */
+        /* padding-left: 20px; */
+        width: 100%;
+    }
+    .textBox h1{
+        font-size: 2.5em;
+        font-family: 'Caprasimo';
+        font-style: italic;
+    }
+    .textBox h2{
+        font-size: 3em;
+    }
+    
+    .firstText p{
+        font-size: 25px;
+    }
+
+}
+@media (max-width: 2561px){
+    .map  h2{
+        width: 100px;
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    .emailAndEtc{
+        text-align: center;
+    }
+}
+@media (max-width: 426px){
+    .productBox{
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 100px;
+        margin-left: 20px;
+    }
+    .productBox{
+        left: 12%
+    }
+    .imgBox{
+        position: relative;
+        margin-top: 40px;
+        left: 5%;
+    }
+}
+@media (max-width: 653px){
+    .map h2{
+        display: inline;
+        opacity: 1;
+        visibility: visible;
+        width: 100px;
+    }
+}
